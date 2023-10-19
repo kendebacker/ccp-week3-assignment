@@ -1,3 +1,116 @@
+@media screen and (prefers-reduced-motion: reduce){
+    .animated-gif{
+        display: none;
+    }
+}
+
+body{
+    font-size: 1.15em;
+    background-color: #efefef;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+.skip a{
+    position: absolute;
+    margin-top: -40px;
+  }
+
+nav{
+    text-align: left;
+    background-color: #1565c0;
+    padding: 20px 0px 20px 0px;
+}
+
+nav li{
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
 h1{
-    font-size: 35px;
+    font-size: 3.5em;
+    padding: 20px 0px 20px 0px;
+    text-align: center;
+}
+
+h2{
+    font-size: 2.5em;
+    padding: 20px 0px 20px 0px;
+    text-align: center;
+}
+
+h3{
+    font-size: 1.5em;
+    padding: 20px 0px 20px 0px;
+    text-align: center;
+}
+
+span{
+    text-align: center;
+}
+
+
+div{
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    row-gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+div *{
+    grid-column: 2/ span 1;
+}
+
+img, video{
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    border: #1565c0 solid 5px;
+    border-radius: 5px;
+}
+
+.active-a{
+    color: black;
+    background-color: #ec407a;
+    border-radius: 5px;
+    pointer-events: none;
+}
+
+@media screen and (min-width: 800px) {
+
+    div{
+        grid-template-columns: 30% 30% 30%;
+        align-items: flex-start;
+    }
+
+    div .main-image, h2, h3, p, ul, ol, li, span{
+        grid-column: 1/ span 3;
+    }
+
+    div img, div video, div figure{
+        grid-column: auto;
+    }
+
+    .skip a:focus{
+        margin-top: 60px;
+    }
+
+    nav{
+        text-align: right;
+    }
+
+    nav li:focus-within:not(.active-li), nav li:hover:not(.active-li){
+        color: white;
+    }
+    
+    nav a:focus:not(.active-a), nav a:hover:not(.active-a){
+        text-decoration: underline;
+    }
+
 }
