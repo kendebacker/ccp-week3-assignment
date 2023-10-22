@@ -23,7 +23,7 @@ nav{
 
 nav li{
     display: inline;
-    margin-right: 20px;
+    margin-left: 10px;
 }
 
 nav a{
@@ -112,6 +112,10 @@ img, video{
     nav a{
         font-weight: normal;
         font-size: 1.15em;
+    }
+
+    nav li{
+        margin-right: 20px;
     }
 
     nav li:focus-within:not(.active-li), nav li:hover:not(.active-li){
