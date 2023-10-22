@@ -31,6 +31,8 @@ nav a{
     color: white;
     padding: 10px;
     border: 2px solid #1565c0;
+    font-weight: bold;
+    font-size: 1.25em;
 }
 
 h1{
@@ -105,6 +107,11 @@ img, video{
 
     nav{
         text-align: right;
+    }
+
+    nav a{
+        font-weight: normal;
+        font-size: 1.15em;
     }
 
     nav li:focus-within:not(.active-li), nav li:hover:not(.active-li){
